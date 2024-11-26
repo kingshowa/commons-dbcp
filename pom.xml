@@ -203,6 +203,9 @@
     <commons.jacoco.branchRatio>0.66</commons.jacoco.branchRatio>
     <commons.jacoco.lineRatio>0.62</commons.jacoco.lineRatio>
     <commons.jacoco.complexityRatio>0.78</commons.jacoco.complexityRatio>
+
+    <sonar.organization>kingshowa</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
   <build>
     <defaultGoal>clean verify apache-rat:check japicmp:cmp checkstyle:check spotbugs:check pmd:check pmd:cpd-check javadoc:javadoc</defaultGoal>

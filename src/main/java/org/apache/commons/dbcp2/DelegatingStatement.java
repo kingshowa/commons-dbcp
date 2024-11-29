@@ -159,9 +159,6 @@ public class DelegatingStatement extends AbandonedTrace implements Statement {
         } finally {
             closed = true;
             statement = null;
-            if (!thrownList.isEmpty()) {
-                throw new SQLExceptionList(thrownList);
-            }
         }
     }
 

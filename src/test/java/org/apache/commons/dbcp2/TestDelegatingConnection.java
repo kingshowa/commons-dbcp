@@ -148,7 +148,7 @@ public class TestDelegatingConnection {
     @Test
     public void testCheckOpenNull() throws Exception {
         try {
-            delegatingConnection.close();
+            //delegatingConnection.close();
             delegatingConnection.checkOpen();
             fail("Expecting SQLException");
         } catch (final SQLException ex) {

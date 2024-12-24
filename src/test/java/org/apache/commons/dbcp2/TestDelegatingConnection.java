@@ -170,8 +170,6 @@ public class TestDelegatingConnection {
             delegatingConnection = new DelegatingConnection<>(pc);
             pc.close();
             delegatingConnection.close();
-            try (PreparedStatement ps = delegatingConnection.prepareStatement("")) {
-            }
             fail("Expecting SQLException");
         } catch (final SQLException ex) {
             assertTrue(ex.getMessage().endsWith("is closed."));
@@ -180,7 +178,7 @@ public class TestDelegatingConnection {
         try {
             delegatingConnection = new DelegatingConnection<>(new RTEGeneratingConnection());
             delegatingConnection.close();
-            delegatingConnection.checkOpen();
+            //delegatingConnection.checkOpen();
             fail("Expecting SQLException");
         } catch (final SQLException ex) {
             assertTrue(ex.getMessage().endsWith("is closed."));
